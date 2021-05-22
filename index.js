@@ -4,7 +4,7 @@ const { choices } = require('yargs');
 
 // profile templates
 const Manager = require('./lib/Manager');
-
+const Engineer = require('./lib/Engineer');
 
 // team array
 const  teamArray = [];
@@ -91,7 +91,7 @@ function managerInput(){
     ])
     .then(employeeData =>{
         // emplpyee type data
-        let {name, id, email, github, school, confirmAddMember} = employeeData;
+        let {name, id, email, role , github, school, confirmAddMember} = employeeData;
         let employee;
 
         if (role === "Engineer"){
