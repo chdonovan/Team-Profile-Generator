@@ -20,11 +20,41 @@ const generateManager = function (manager) {
 
 // engineer card function
 const generateEngineer = function(engineer){
+    return `
+    <div class = "col-4 mt-4">
+        <div class = "card h-100">
+            <div class = "card-header>"
+                <h3> ${engineer.name}</h3>
+                <h4> Engineer</h4>
+            </div>
+            <div class = "card-body">
+                <p> ID: ${engineer.id}</p>
+                <p> Email: ${engineer.email}</p>
+                <p> Github: ${engineer.github}</p>
+            </div>
+        </div>
+    </div> 
 
+    `;
 }
 // intern card function
 const generateInter = function(intern){
+    return `
+    <div class = "col-4 mt-4">
+        <div class = "card h-100">
+            <div class = "card-header>"
+                <h3> ${intern.name}</h3>
+                <h4> Intern</h4>
+            </div>
+            <div class = "card-body">
+                <p> ID: ${intern.id}</p>
+                <p> Email: ${intern.email}</p>
+                <p> School: ${intern.school}</p>
+            </div>
+        </div>
+    </div> 
 
+    `;
 };
 
 // push array to page
