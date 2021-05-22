@@ -5,6 +5,7 @@ const { choices } = require('yargs');
 // profile templates
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 // team array
 const  teamArray = [];
