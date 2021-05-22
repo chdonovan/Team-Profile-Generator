@@ -61,6 +61,38 @@ const generateInter = function(intern){
 
 htmlGenerate = (data) => {
 
+    // cards array
+
+    for (let i =0; i < data.length; i++){
+        const employee = data[i];
+        const role = employee.getRole();
+
+        // manager function
+        if (role === "Manager") {
+            const managerCard = generateManager(employee);
+
+            pageArray.push(managerCard);
+        }
+        // engineer function
+        if (role === "Engineer") {
+            const engineerCard = generateEngineer(employee);
+
+            pageArray.push(engineerCard);
+        }
+        // intern function
+        if (role === "Intern") {
+            const internCard = generateIntern(employee);
+
+            pageArray.push(internCard);
+        }
+
+    }
+
+    // joins strings
+    const employeeCards = pageArray.join('')
+    
+
+
 }
 
 // generates HTML
