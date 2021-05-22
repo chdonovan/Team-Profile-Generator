@@ -1,6 +1,6 @@
 // modules
 const inquirer = require('inquirer');
-const { choices } = require('yargs');
+const fs = require('fs');
 
 // profile templates
 const Manager = require('./lib/Manager');
