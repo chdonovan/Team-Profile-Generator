@@ -90,9 +90,11 @@ htmlGenerate = (data) => {
 
     // joins strings
     const employeeCards = pageArray.join('')
-    
 
+    // generate page return
 
+    const generateTeam = generatePage(employeeCards);
+    return generateTeam;
 }
 
 // generates HTML
