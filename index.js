@@ -1,7 +1,11 @@
+// modules
 const inquirer = require('inquirer');
 
+// profile templates
+const Manager = require('./lib/Manager');
+
 // function for intial user prompt
-function userPropmt(){
+function managerInput(){
     return inquirer.prompt([
         {
             type: "input",
@@ -21,10 +25,31 @@ function userPropmt(){
         },
         {
             type: "input",
-            name: "officeNumb",
+            name: "office",
             message: "Input Office Number"
-        },
+        }
         
     ])
+    .then(mgrInput => {
+        const {name, id , email, office} = mgrInput;
+        const manager = new Manager (name, id, email, office);
+
+        //teamArray.push(manager);
+        console.log(manager);
+    })
+    
 }
-userPropmt();
+
+// function addMember(){
+//     return inquirer.prompt([
+//         { 
+//             type: "list",
+//             name: "add members",
+//             message: "would you like to add more team members?",
+//             choices: ["yes", "no"]
+//         }
+//     ])
+// }
+
+managerInput();
+//addMember();
