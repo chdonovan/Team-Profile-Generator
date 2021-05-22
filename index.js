@@ -10,6 +10,9 @@ const Intern = require('./lib/Intern');
 // team array
 const  teamArray = [];
 
+// page creation
+const htmlGenerate = require('./src/htmlgen');
+
 // function for intial user prompt
 function managerInput(){
     return inquirer.prompt([
@@ -119,16 +122,20 @@ function managerInput(){
 
 };
 
-// function addMember(){
-//     return inquirer.prompt([
-//         { 
-//             type: "list",
-//             name: "add members",
-//             message: "would you like to add more team members?",
-//             choices: ["yes", "no"]
-//         }
-//     ])
-// }
+// html generation function'
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        // if error
+        if (err){
+            console.log(err);
+            return;
+        }
+        else {
+            console.log("your team has been created! Written to index.html")
+        }
+    })
+};
+
 
 managerInput()
  .then(addMember);
