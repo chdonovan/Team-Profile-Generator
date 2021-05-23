@@ -116,9 +116,17 @@ const generatePage = function (employeeCards) {
              <span class ="navbar-brand" id ="nav-bar-text">Team Profile</span>
             </nav>
         </header>
-        
+        <main>
+            <div class = "conatainer">
+                <div class = "row justify-content-center" id= "team-cards">
+                    <!-- Team Cards -->
+                    ${employeeCards}
+                </div>
+            </div>
+        </main>
+    </body>
 
-
+    </html>
 
 `;
 }
