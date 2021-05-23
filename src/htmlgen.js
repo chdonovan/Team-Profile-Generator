@@ -4,8 +4,9 @@ const generateManager = function (manager) {
     <div class = "col-4 mt-4">
         <div class = "card h-100">
             <div class = "card-header>"
-                <h3> ${manager.name}</h3>
-                <h4> Manager</h4>
+                <h3> Manager</h4>
+                <h4> ${manager.name}</h3>
+                
             </div>
             <div class = "card-body">
                 <p> ID: ${manager.id}</p>
@@ -24,8 +25,9 @@ const generateEngineer = function(engineer){
     <div class = "col-4 mt-4">
         <div class = "card h-100">
             <div class = "card-header>"
-                <h3> ${engineer.name}</h3>
-                <h4> Engineer</h4>
+                <h3> Engineer</h4>
+                <h4> ${engineer.name}</h3>
+                
             </div>
             <div class = "card-body">
                 <p> ID: ${engineer.id}</p>
@@ -43,8 +45,9 @@ const generateIntern = function(intern){
     <div class = "col-4 mt-4">
         <div class = "card h-100">
             <div class = "card-header>"
-                <h3> ${intern.name}</h3>
-                <h4> Intern</h4>
+                <h3> Intern</h4>
+                <h4> ${intern.name}</h3>
+        
             </div>
             <div class = "card-body">
                 <p> ID: ${intern.id}</p>
@@ -106,7 +109,7 @@ const generatePage = function (employeeCards) {
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name= "viewport" content= "width=device-width, inital -scale=1.0">
+        <meta name= "viewport" content= "width=device-width">
         <title> MY TEAM </title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
@@ -118,7 +121,7 @@ const generatePage = function (employeeCards) {
             </nav>
         </header>
         <main>
-            <div class = "conatainer">
+            <div class = "container">
                 <div class = "row justify-content-center" id= "team-cards">
                     <!-- Team Cards -->
                     ${employeeCards}
@@ -126,7 +129,8 @@ const generatePage = function (employeeCards) {
             </div>
         </main>
     </body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </html>
 
 `;
