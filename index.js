@@ -12,6 +12,7 @@ const  teamArray = [];
 
 // page creation
 const htmlGenerate = require('./src/htmlgen');
+const { default: generate } = require('@babel/generator');
 
 // function for intial user prompt
 function managerInput(){
@@ -138,4 +139,13 @@ const writeFile = data => {
 
 
 managerInput()
- .then(addMember);
+ .then(addMember)
+ .then(teamArray => {
+     return htmlGenerate(teamArray);
+ })
+ .then(pageHTML => {
+     return writeFile(pageHTML);
+ })
+ .catch(err =>{
+     console.log(err);
+ });

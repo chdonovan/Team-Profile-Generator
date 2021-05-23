@@ -38,7 +38,7 @@ const generateEngineer = function(engineer){
     `;
 }
 // intern card function
-const generateInter = function(intern){
+const generateIntern = function(intern){
     return `
     <div class = "col-4 mt-4">
         <div class = "card h-100">
@@ -62,6 +62,7 @@ const generateInter = function(intern){
 htmlGenerate = (data) => {
 
     // cards array
+    pageArray = [];
 
     for (let i =0; i < data.length; i++){
         const employee = data[i];
