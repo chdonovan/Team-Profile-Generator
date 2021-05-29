@@ -8,7 +8,7 @@ This application allows you to quickly create a team roster made up of Engineers
 ![alt text](./images/usageGIF.gif)
 link to video https://drive.google.com/file/d/1pM6gRCRY_MS4CXxiF0fhnS9T8080llPx/view?usp=sharing
 ## Screenshot
-![alt tect](./images/screenshot.png)
+![alt text](./images/Screenshot.png)
 
 ## Installation
 you must have node.js installed on your local machine to use the app
