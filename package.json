@@ -1,5 +1,16 @@
 {
-    "scripts": {
-      "test": "jest"
-    }
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chdonovan/Team-Profile-Generator"
+  },
+  "author": "Chris Donovan",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "inquirer": "^7.1.0"
   }
+}
